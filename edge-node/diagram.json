@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "MJ",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 91.1, "left": 225.4, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": 60, "left": 120, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": 120, "left": 360, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr", "top": 348.8, "left": 39.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:3V3", "dht:VCC", "red", [] ],
+    [ "esp:GND.1", "dht:GND", "black", [ "h-0.3", "v28.7", "h-162.6" ] ],
+    [ "esp:D15", "dht:SDA", "green", [ "v-38.6", "h-182.2" ] ],
+    [ "esp:VIN", "pir:VCC", "red", [] ],
+    [ "esp:GND.1", "pir:GND", "black", [] ],
+    [ "esp:D13", "pir:OUT", "green", [ "v76.6", "h175.52" ] ],
+    [ "esp:3V3", "ldr:VCC", "red", [] ],
+    [ "esp:GND.1", "ldr:GND", "black", [ "v57.5", "h-86.7", "v77.2" ] ],
+    [ "esp:D34", "ldr:AO", "green", [ "h28.8", "v249.4" ] ]
+  ],
+  "dependencies": {}
+}

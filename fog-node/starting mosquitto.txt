@@ -1,0 +1,9 @@
+/opt/homebrew/opt/mosquitto/sbin/mosquitto -v (in terminal)
+
+ESP32 Edge Node
+   ↓ MQTT
+Mosquitto Broker
+   ↓
+Fog Node (Python)
+   ↓
+Processing / Analytics
